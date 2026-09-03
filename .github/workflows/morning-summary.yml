@@ -2,8 +2,9 @@ name: Market Morning Summary
 
 on:
   schedule:
-    # 07:15 IST = 01:45 UTC, every day
-    - cron: "45 1 * * *"
+    # Runs daily at ~7:33 AM (nudged off the exact half-hour to avoid
+    # GitHub's peak-load scheduling window).
+    - cron: "33 7 * * *"
   workflow_dispatch: {}   # lets you trigger it manually from the Actions tab
 
 jobs:
